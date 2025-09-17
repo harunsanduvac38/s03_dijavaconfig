@@ -13,23 +13,23 @@
 <!-- 		<constructor-arg ref="datasourceDesarollo"/> -->
 <!-- 	</bean> -->
 
-	<context:annotation-config/>
-	<context:component-scan base-package="cursogetafe.dianotaciones"></context:component-scan>
+<!-- 	<context:annotation-config/> -->
+<!-- 	<context:component-scan base-package="cursogetafe.dianotaciones"></context:component-scan> -->
 
-	<bean id="datasourceProduccion" class="org.apache.commons.dbcp2.BasicDataSource">
-		<property name="url" value="${bbdd.url}"/>
-		<property name="driverClassName" value="${bbdd.driver}"/>
-		<property name="username" value="${bbdd.user}"/>
-		<property name="password" value="${bbdd.pass}"/>
-	</bean>
+<!-- 	<bean id="datasourceProduccion" class="org.apache.commons.dbcp2.BasicDataSource"> -->
+<!-- 		<property name="url" value="${bbdd.url}"/> -->
+<!-- 		<property name="driverClassName" value="${bbdd.driver}"/> -->
+<!-- 		<property name="username" value="${bbdd.user}"/> -->
+<!-- 		<property name="password" value="${bbdd.pass}"/> -->
+<!-- 	</bean> -->
 	
-	<bean id="datasourceDesarollo" class="org.apache.commons.dbcp2.BasicDataSource">
-		<property name="url" value="${test.bbdd.url}"/>
-		<property name="driverClassName" value="${test.bbdd.driver}"/>
-		<property name="username" value="${test.bbdd.user}"/>
-		<property name="password" value="${test.bbdd.pass}"/>
-	</bean>
+<!-- 	<bean id="datasourceDesarollo" class="org.apache.commons.dbcp2.BasicDataSource"> -->
+<!-- 		<property name="url" value="${test.bbdd.url}"/> -->
+<!-- 		<property name="driverClassName" value="${test.bbdd.driver}"/> -->
+<!-- 		<property name="username" value="${test.bbdd.user}"/> -->
+<!-- 		<property name="password" value="${test.bbdd.pass}"/> -->
+<!-- 	</bean> -->
 	
-	<context:property-placeholder location="classpath:app.properties"/>
+<!-- 	<context:property-placeholder location="classpath:app.properties"/> -->
 	
 </beans>

@@ -10,10 +10,10 @@
 
 		<!-- <bean id="cliente_dao" class="cursogetafe.dianotaciones.persistencia.ClienteDaoImpl"/> -->
 		
-		<context:component-scan base-package="cursogetafe.dianotaciones.negocio, cursogetafe.dianotaciones.persistencia"/>
+<!-- 		<context:component-scan base-package="cursogetafe.dianotaciones.negocio, cursogetafe.dianotaciones.persistencia"/> -->
 		
 		<!-- Indica que la inyección de dependencias se hacen con @Autowired -->
-			<context:annotation-config/>
+<!-- 			<context:annotation-config/> -->
 			
 <!-- 		(Inyección de dependencia por setter) -->
 <!-- 		<bean id="negocio" class="cursogetafe.dianotaciones.negocio.NegocioImpl"> -->

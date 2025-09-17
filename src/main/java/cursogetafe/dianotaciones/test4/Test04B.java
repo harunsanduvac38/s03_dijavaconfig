@@ -1,4 +1,4 @@
-package cursogetafe.dianotaciones;
+package cursogetafe.dianotaciones.test4;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,8 +12,10 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+
+import cursogetafe.dianotaciones.config.A04Config;
 
 @Component("test")
 public class Test04B {
@@ -28,7 +30,7 @@ public class Test04B {
 //	Si hay un sólo bean compatible con DataSource, lo inyecta
 //	Si hay más de uno, se debe indicar cual inyectar con @Qualifier
 	@Autowired
-	public Test04B(@Qualifier("datasourceDesarollo") DataSource dataSource) {
+	public Test04B(@Qualifier("datasourceProduccion") DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
 	
@@ -50,7 +52,7 @@ public class Test04B {
 	public static void main(String[] args) throws SQLException {
 
 		
-		BeanFactory ctx = new ClassPathXmlApplicationContext("a04_ctx.xml");
+		BeanFactory ctx = new AnnotationConfigApplicationContext(A04Config.class);
 		
 		
 		
