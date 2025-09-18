@@ -9,8 +9,10 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+
+import cursogetafe.dianotaciones.config.A05Config;
 
 @Component("test5")
 public class Test05 {
@@ -37,7 +39,7 @@ public class Test05 {
 	
 	public static void main(String[] args) throws SQLException {
 
-		BeanFactory ctx = new ClassPathXmlApplicationContext("a05_ctx.xml");
+		BeanFactory ctx = new AnnotationConfigApplicationContext(A05Config.class);
 		
 		Test05 test = ctx.getBean(Test05.class);
 		test.consulta();

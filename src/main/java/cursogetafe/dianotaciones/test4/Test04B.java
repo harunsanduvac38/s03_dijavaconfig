@@ -30,7 +30,7 @@ public class Test04B {
 //	Si hay un sólo bean compatible con DataSource, lo inyecta
 //	Si hay más de uno, se debe indicar cual inyectar con @Qualifier
 	@Autowired
-	public Test04B(@Qualifier("datasourceProduccion") DataSource dataSource) {
+	public Test04B(@Qualifier("datasourceDesarollo") DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
 	
