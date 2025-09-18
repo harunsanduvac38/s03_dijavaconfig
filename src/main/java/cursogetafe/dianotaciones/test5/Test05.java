@@ -45,5 +45,4 @@ public class Test05 {
 		test.consulta();
 		
 	}
-
 }

@@ -29,7 +29,4 @@ public class A05ProduccionConfig {
 		bds.setPassword(prop.getProperty("bbdd.pass"));	
 		return bds;
 	}
-	
-
-	
 }
